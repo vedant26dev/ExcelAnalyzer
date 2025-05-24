@@ -61,19 +61,38 @@ Shubham Giri
    git commit -m "Added detailed README with screenshots"
    git push origin main
 
-(assets/images/s1.png)
-(assets/images/s2.png)
-(assets/images/s3.png)
-(assets/images/s4.png)
-(assets/images/s5.png)
-(assets/images/s6.png)
-(assets/images/s7.png)
-(assets/images/s8.png)
-(assets/images/s9.png)
-(assets/images/s10.png)
-(assets/images/s11.png)
-(assets/images/s12.png)
-(assets/images/s13.png)
+## 📸 Project Screenshots
+
+### 🔹 Landing Page
+![Landing Page](assets/images/s1.png)
+
+### 🔹 Login Page
+![Login Page](assets/images/s2.png)
+
+### 🔹 Register Page
+![Register Page](assets/images/s3.png)
+
+### 🔹 User Dashboard
+![User Dashboard](assets/images/s4.png)
+
+### 🔹 Upload Excel
+![Upload Excel](assets/images/s5.png)
+
+### 🔹 2D Chart View
+![2D Chart View](assets/images/s6.png)
+
+### 🔹 3D Chart View
+![3D Chart View](assets/images/s7.png)
+
+### 🔹 Chart Filters
+![Chart Filters](assets/images/s8.png)
+
+### 🔹 Admin Dashboard
+![Admin Dashboard](assets/images/s9.png)
+
+### 🔹 User History
+![User History](assets/images/s10.png)
+
 
 
 
