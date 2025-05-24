@@ -18,4 +18,13 @@ const uploadExcel = async (req, res) => {
     res.status(500).json({ message: "Failed to read Excel file", error: err.message });
   }
 };
-module.exports = { uploadExcel };
+
+const generateChartSummary = async (req, res) => {
+  try {
+    console.log("Received chart data for summary:", req.body);
+    res.status(200).json({ message: "Chart data received successfully." });
+  } catch (error) {
+    res.status(500).json({ message: "Error processing chart data.", error: error.message });
+  }
+};
+module.exports = { uploadExcel, generateChartSummary };

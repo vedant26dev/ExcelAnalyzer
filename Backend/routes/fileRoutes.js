@@ -1,10 +1,10 @@
 // backend/routes/fileRoutes.js
 const express = require('express');
 const multer = require('multer');
-const FileHistory = require('../models/FileHistory');
 
+const HistoryFile = require('../models/HistoryFile');
 const router = express.Router();
-
+const { generateChartSummary } = require('../controllers/excelController');
 // Set up multer for file upload
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -18,6 +18,7 @@ const upload = multer({ storage });
 
 // Route to handle file upload
 router.post('/upload', upload.single('file'), async (req, res) => {
+  console.log('Upload route hit');
   const { userId } = req.body; // Assuming you are sending userId from frontend
 
   if (!userId) {
@@ -26,31 +27,14 @@ router.post('/upload', upload.single('file'), async (req, res) => {
 
   try {
     const file = req.file;
-    const currentDate = new Date();
-
-    // File details object
-    const newFile = {
-      name: file.filename,
-      uploadedAt: currentDate,
-    };
-
-    // Find the user's file history
-    let userHistory = await FileHistory.findOne({ userId });
-
-    if (userHistory) {
-      // If history exists, update it by adding the new file
-      if (userHistory.files.length >= 5) {
-        return res.status(400).json({ message: 'Maximum of 5 files allowed.' });
-      }
-      userHistory.files.push(newFile);
-      await userHistory.save();
-    } else {
-      // If no history, create a new entry
-      userHistory = new FileHistory({ userId, files: [newFile] });
-      await userHistory.save();
-    }
-
-    res.status(200).json({ message: 'File uploaded successfully.', file: newFile });
+    const historyFile = new HistoryFile({
+      filename: file.filename,
+      userId: userId,
+    });
+ console.log('File received:', req.file);
+ console.log('User ID received:', req.body.userId);
+ await historyFile.save();
+ res.status(200).json({ message: 'File uploaded successfully.', file: historyFile });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: 'Server error while uploading file.' });
@@ -62,11 +46,10 @@ router.get('/history/:userId', async (req, res) => {
   const { userId } = req.params;
 
   try {
-    const userHistory = await FileHistory.findOne({ userId });
+    const userHistory = await HistoryFile.find({ userId }).sort({ uploadedAt: -1 });
     if (!userHistory) {
       return res.status(404).json({ message: 'No history found for this user.' });
     }
-
     res.status(200).json(userHistory);
   } catch (err) {
     console.error(err);
@@ -76,23 +59,18 @@ router.get('/history/:userId', async (req, res) => {
 
 // Route to delete a file from history
 router.delete('/delete/:userId/:fileId', async (req, res) => {
-  const { userId, fileId } = req.params;
+  const { fileId } = req.params;
 
   try {
-    const userHistory = await FileHistory.findOne({ userId });
-    if (!userHistory) {
-      return res.status(404).json({ message: 'No history found for this user.' });
-    }
-
-    // Find and remove the file
-    userHistory.files = userHistory.files.filter(file => file._id.toString() !== fileId);
-    await userHistory.save();
-
+    await HistoryFile.findByIdAndDelete(fileId);
     res.status(200).json({ message: 'File deleted successfully.' });
-  } catch (err) {
-    console.error(err);
+  }
+ catch (err) {
+ console.error(err);
     res.status(500).json({ message: 'Server error while deleting file.' });
   }
 });
 
+// Route to generate AI summary for chart data
+router.post('/summarize-chart-data', generateChartSummary);
 module.exports = router;
