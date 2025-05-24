@@ -16,10 +16,9 @@ An all-in-one Excel analysis platform that allows users to upload `.xlsx` or `.x
 ## 📸 Screenshots
 
 ### ✅ Dashboard View  
-![Dashboard](./frontend/src/images/dashboard.png)
 
 ### 📊 Chart Preview  
-![Chart](./frontend/src/images/chart.png)
+
 
 ---
 
@@ -61,6 +60,8 @@ Shubham Giri
    git commit -m "Added detailed README with screenshots"
    git push origin main
 
+![Screenshot 1](assets/images/s1.png)
+![Screenshot 2](assets/images/s2.png)
 
 
 
