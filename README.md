@@ -31,6 +31,9 @@ An all-in-one Excel analysis platform that allows users to upload `.xlsx` or `.x
 | Recharts  | MongoDB   | dotenv, cors |
 
 ---
+![Screenshot 1](assets/images/s1.png)
+![Screenshot 2](assets/images/s2.png)
+
 
 ## 📦 Setup Instructions
 
@@ -59,9 +62,6 @@ Shubham Giri
    git add README.md
    git commit -m "Added detailed README with screenshots"
    git push origin main
-
-![Screenshot 1](assets/images/s1.png)
-![Screenshot 2](assets/images/s2.png)
 
 
 
