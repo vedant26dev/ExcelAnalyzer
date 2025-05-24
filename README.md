@@ -61,6 +61,19 @@ Shubham Giri
    git commit -m "Added detailed README with screenshots"
    git push origin main
 
+(assets/images/s1.png)
+(assets/images/s2.png)
+(assets/images/s3.png)
+(assets/images/s4.png)
+(assets/images/s5.png)
+(assets/images/s6.png)
+(assets/images/s7.png)
+(assets/images/s8.png)
+(assets/images/s9.png)
+(assets/images/s10.png)
+(assets/images/s11.png)
+(assets/images/s12.png)
+(assets/images/s13.png)
 
 
 
