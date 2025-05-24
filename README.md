@@ -60,7 +60,7 @@ Shubham Giri
    git add README.md
    git commit -m "Added detailed README with screenshots"
    git push origin main
-
+(assets/images/s1.png)
 
 
 
