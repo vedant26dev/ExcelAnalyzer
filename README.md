@@ -33,6 +33,17 @@ An all-in-one Excel analysis platform that allows users to upload `.xlsx` or `.x
 ---
 ![Screenshot 1](assets/images/s1.png)
 ![Screenshot 2](assets/images/s2.png)
+![Screenshot 1](assets/images/s3.png)
+![Screenshot 2](assets/images/s4.png)
+![Screenshot 1](assets/images/s5.png)
+![Screenshot 2](assets/images/s6.png)
+![Screenshot 1](assets/images/s7.png)
+![Screenshot 2](assets/images/s8.png)
+![Screenshot 1](assets/images/s9.png)
+![Screenshot 2](assets/images/s10.png)
+![Screenshot 1](assets/images/s11.png)
+![Screenshot 2](assets/images/s12.png)
+![Screenshot 2](assets/images/s13.png)
 
 
 ## 📦 Setup Instructions
