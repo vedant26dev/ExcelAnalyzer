@@ -24,5 +24,5 @@ ExcelAnalyzer is a data processing and visualization tool that helps analyze Exc
 ```bash
 git clone https://github.com/vedant26dev/ExcelAnalyzer.git
 cd ExcelAnalyzer
-# Follow project-specific instructions here
+
 ```
