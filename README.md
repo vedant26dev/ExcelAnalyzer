@@ -1,89 +1,28 @@
-# 📊 Excel Analyzer Platform
+# ExcelAnalyzer
 
-An all-in-one Excel analysis platform that allows users to upload `.xlsx` or `.xls` files, analyze data visually with 2D and 3D charts, and view their file history — all in a clean dashboard. Admins can manage users and monitor usage statistics.
+🎓 Internship Project Submission by Vedant Patil (`vedant26dev`)
 
-## 🚀 Features
+## Overview
 
-- 📂 Upload Excel files and parse data
-- 📈 Generate 2D and 3D interactive charts
-- 🔍 Dynamic X & Y axis selection
-- 🕓 View upload and analysis history
-- 👤 User/Admin authentication (JWT-based)
-- 🎨 Dark-themed modern UI with Tailwind CSS
+ExcelAnalyzer is a data processing and visualization tool that helps analyze Excel files for trends, patterns, and statistics.
 
----
+## Features
 
-## 📸 Screenshots
+- Upload Excel files
+- Display data in table format
+- Generate summary statistics
+- Visualize data with charts (bar, pie, etc.)
 
-### ✅ Dashboard View  
+## Tech Stack
 
-### 📊 Chart Preview  
+- Python
+- Pandas
+- Matplotlib / Seaborn / Tkinter (or whatever you used)
 
-
----
-
-## 🛠️ Tech Stack
-
-| Frontend  | Backend   | Other       |
-|-----------|-----------|-------------|
-| React.js  | Node.js   | JWT Auth    |
-| Tailwind  | Express   | Multer (File Upload) |
-| Recharts  | MongoDB   | dotenv, cors |
-
----
-![Screenshot 1](assets/images/s1.png)
-![Screenshot 2](assets/images/s2.png)
-![Screenshot 1](assets/images/s3.png)
-![Screenshot 2](assets/images/s4.png)
-![Screenshot 1](assets/images/s5.png)
-![Screenshot 2](assets/images/s6.png)
-![Screenshot 1](assets/images/s7.png)
-![Screenshot 2](assets/images/s8.png)
-![Screenshot 1](assets/images/s9.png)
-![Screenshot 2](assets/images/s10.png)
-![Screenshot 1](assets/images/s11.png)
-![Screenshot 2](assets/images/s12.png)
-![Screenshot 2](assets/images/s13.png)
-
-
-## 📦 Setup Instructions
-
-### 1. Clone the repository
+## How to Run
 
 ```bash
-git clone https://github.com/Shubhamgiri102/ExcelAnalyzer.git
+git clone https://github.com/vedant26dev/ExcelAnalyzer.git
 cd ExcelAnalyzer
-cd Backend
-npm install
-cd ../frontend
-npm install
-npm run dev
-📬 Contact
-Shubham Giri
-📧 girishubham451@gmail.com
-🌐 LinkedIn | GitHub
-
----
-
-### ✅ STEP 3: Add the README.md to Git
-
-1. Save the above as `README.md` in your root project folder (`excelfirebase/`).
-2. Then run:
-   ```bash
-   git add README.md
-   git commit -m "Added detailed README with screenshots"
-   git push origin main
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# Follow project-specific instructions here
+```
